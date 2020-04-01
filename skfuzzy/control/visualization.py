@@ -5,7 +5,10 @@ from __future__ import print_function, division
 
 import numpy as np
 import networkx as nx
-import matplotlib.pyplot as plt
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    pass
 
 from ..fuzzymath.fuzzy_ops import interp_membership
 

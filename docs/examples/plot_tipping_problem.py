@@ -35,7 +35,10 @@ are defined in scikit-fuzzy as follows
 """
 import numpy as np
 import skfuzzy as fuzz
-import matplotlib.pyplot as plt
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    pass
 
 # Generate universe variables
 #   * Quality and service on subjective ranges [0, 10]

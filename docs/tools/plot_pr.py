@@ -6,10 +6,12 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter
-from matplotlib.transforms import blended_transform_factory
-
+try:
+    import matplotlib.pyplot as plt
+    from matplotlib.ticker import FuncFormatter
+    from matplotlib.transforms import blended_transform_factory
+except ImportError:
+    pass
 
 cache = '_pr_cache.txt'
 

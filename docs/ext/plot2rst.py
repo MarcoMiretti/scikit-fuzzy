@@ -74,9 +74,12 @@ import traceback
 import itertools
 
 import numpy as np
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
+try:
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+except ImportError:
+    pass
 
 from skimage import io
 from skimage import transform
